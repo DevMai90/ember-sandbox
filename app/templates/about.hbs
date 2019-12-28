@@ -1,9 +1,5 @@
 <h2>About</h2>
 {{#each model as |bookmark|}}
-<article id={{bookmark.id}}>
-  <a href={{bookmark.link}}>
-    {{bookmark.title}} - {{bookmark.about}}
-  </a>
-</article>
+{{!-- Component call. Note that we do not need to use double curly around bookmark --}}
+{{bookmark-listing bookmark=bookmark}}
 {{/each}}
-{{outlet}}
