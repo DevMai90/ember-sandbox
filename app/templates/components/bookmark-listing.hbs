@@ -1,6 +1,7 @@
 <article id={{bookmark.id}}>
   <a href={{bookmark.link}}>
-    {{bookmark.title}} - {{bookmark.about}}
+    {{!-- Helper function name. Anything after are arguments. Gets passed in as arrays --}}
+    {{bookmark-title bookmark.title bookmark.about}}
   </a>
 </article>
 {{yield}}
