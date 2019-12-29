@@ -17,10 +17,15 @@ Router.map(function() {
     this.route("edit", {
       path: "/edit/:bookmark_id"
     });
+    this.route('about');
   });
   // All routes not controlled by Ember will default to this path
   this.route("page-not-found", {
     path: "/*wildcard"
+  });
+
+  this.route('users', function() {
+    this.route('list-active');
   });
 });
 
