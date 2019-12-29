@@ -4,10 +4,15 @@
 </p>
 {{!-- Index value is the key --}}
 {{#each model as |user index|}}
-<p>${{index}} - {{user.fullName}}</p>
+{{!-- <p>${{index}} - {{user.fullName}}</p>
 {{#each user.bookmarks as |bookmark|}}
 {{else}}
 <p>No bookmarks for User</p>
-{{/each}}
+{{/each}} --}}
+{{!-- {{#users-list avatarUrl=user.avatar email=user.email}} --}}
+{{!-- We passed in static --}}
+{{#users-list user.avatar user.email}}
+{{user.fullName}}
+{{/users-list}}
 {{/each}}
 {{outlet}}
