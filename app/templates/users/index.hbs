@@ -1,0 +1,13 @@
+<h3>Users</h3>
+<p>
+  {{testProperty}}
+</p>
+{{!-- Index value is the key --}}
+{{#each model as |user index|}}
+<p>${{index}} - {{user.fullName}}</p>
+{{#each user.bookmarks as |bookmark|}}
+{{else}}
+<p>No bookmarks for User</p>
+{{/each}}
+{{/each}}
+{{outlet}}

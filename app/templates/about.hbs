@@ -1,5 +1,9 @@
 <h2>About</h2>
 {{#each model as |bookmark|}}
+{{#if bookmark.public}}
 {{!-- Component call. Note that we do not need to use double curly around bookmark --}}
 {{bookmark-listing bookmark=bookmark}}
+{{else}}
+<article>Not public bookmark</article>
+{{/if}}
 {{/each}}
