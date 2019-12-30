@@ -1,5 +1,6 @@
 <h2>About</h2>
 {{#each model as |bookmark|}}
+{{#link-to 'bookmarks.edit' bookmark}}Edit Bookmark{{/link-to}}
 {{#if bookmark.public}}
 {{!-- Component call. Note that we do not need to use double curly around bookmark --}}
 {{bookmark-listing bookmark=bookmark}}
